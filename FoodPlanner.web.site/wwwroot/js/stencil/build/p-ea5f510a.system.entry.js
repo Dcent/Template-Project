@@ -1,0 +1,1 @@
+System.register(["./p-b8ba8988.system.js"],(function(t){"use strict";var e,n;return{setters:[function(t){e=t.r;n=t.h}],execute:function(){var r=t("mock_mock",function(){function t(t){e(this,t)}t.prototype.render=function(){return n("div",null,n("h1",null,"Hello from stencilJS"),n("h2",null,"test test test "))};return t}())}}}));

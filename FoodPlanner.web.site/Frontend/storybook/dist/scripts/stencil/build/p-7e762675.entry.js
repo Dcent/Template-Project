@@ -1,0 +1,1 @@
+import{r as t,h as s}from"./p-d46358cd.js";const r=class{constructor(s){t(this,s)}render(){return s("div",null,s("h1",null,"Hello from stencilJS"),s("h2",null,"test test test "))}};export{r as mock_mock}

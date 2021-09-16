@@ -1,0 +1,228 @@
+.demo-wrapper {
+    padding: 50px;
+}
+
+.demo-section {
+    max-width: 700px;
+}
+
+.demo-section--narrow {
+    max-width: 250px;
+}
+
+.demo-row-of-buttons {
+    padding: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.color__example {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 10.3125em;
+    height: 7.5em;
+    transition: transform 250ms;
+    margin-bottom: 1rem;
+    margin-right: 20px;
+}
+
+.color {
+    margin-bottom: 3rem;
+}
+
+.color-border {
+    border: 1px black solid;
+}
+
+.wrapped-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: 0;
+    max-width: 51.6rem;
+}
+
+.demo-table {
+    width: 100%;
+    max-width: 38rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+.demo-table tr td {
+    border: none !important;
+}
+
+.demo-table thead tr {
+    border-top: none;
+}
+
+.demo-table tr th {
+    border: none !important;
+}
+
+.demo-table thead tr {
+    font-size: 0.875rem;
+    font-weight: $font_weight_bold;
+    text-align: left;
+    line-height: 1.25;
+    padding: 1rem 3rem 1rem 0;
+    border-bottom: 2px solid #3057d5;
+    white-space: nowrap;
+}
+
+.demo-table tbody tr {
+    border-bottom: 1px solid #8897a2;
+}
+
+.demo-table tbody tr:nth-of-type(2n) {
+    background-color: transparent;
+}
+
+.demo-table tbody tr td {
+    font-size: 0.875rem;
+    padding: 1rem 3rem 1rem 0;
+    line-height: 1.25;
+}
+
+.demo-spacing-layout {
+    border: 1px solid #007D7D;
+    background-color: #9FF9C9;
+}
+
+.demo-spacing-layout-xxs {
+    height: 1rem;
+    width: 1rem;
+}
+.demo-spacing-layout-xs {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.demo-spacing-layout-s {
+    height: 2rem;
+    width: 2rem;
+}
+.demo-spacing-layout-m {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.demo-spacing-layout-l {
+    height: 4rem;
+    width: 4rem;
+}
+.demo-spacing-layout-xl {
+    height: 5rem;
+    width: 5rem;
+}
+
+.demo-spacing-module-xs {
+    height: 0.125rem;
+    width: 0.125rem;
+}
+.demo-spacing-module-s {
+    height: 0.25rem;
+    width: 0.25rem;
+}
+.demo-spacing-module-m {
+    height: 0.5rem;
+    width: 0.5rem;
+}
+.demo-spacing-module-l {
+    height: 1rem;
+    width: 1rem;
+}
+.demo-spacing-module-xl {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.demo-spacing-module {
+    border: 1px solid #007D7D;
+    background-color: #9FF5F8;
+}
+
+.demo-snippet {
+    display: flex;
+}
+
+.demo-snippet textarea {
+    min-height: 40px;
+    border-radius: 8px;
+    padding: 0.6rem;
+    height: 40px;
+}
+
+.demo-shadow-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/**
+ * This stylesheet is for styles you want to include only when displaying demo
+ * styles for grids, animations, color swatches, etc.
+ * These styles will not be your production CSS.
+ */
+#sg-patterns {
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    max-width: 100%;
+    padding: 0 0.5em;
+}
+
+.demo-animate {
+    background: #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.sg-colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.sg-colors li {
+    padding: 0.3em;
+    margin: 0 0.5em 0.5em 0;
+    width: 140px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.sg-swatch {
+    display: block;
+    height: 4em;
+    margin-bottom: 0.3em;
+    border-radius: 5px;
+}
+
+.sg-label {
+    font-size: 90%;
+    line-height: 1;
+}
+
+.usesiam:before {
+    color: #3cc38c !important;
+}
+
+.demo-container {
+    padding: 25px;
+}

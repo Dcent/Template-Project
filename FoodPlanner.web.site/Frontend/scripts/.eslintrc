@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [ "plugin:@stencil/recommended", "../../../.eslintrc.js" ],
+  "overrides": [
+    {
+      "files": [ "*.tsx" ],
+      "rules": {
+        "@stencil/own-props-must-be-private": "error",
+        "@stencil/own-methods-must-be-private": "error",
+        "@stencil/required-prefix": [
+          "error",
+          [ "solar" ]
+        ],
+        "@stencil/class-pattern": [
+          "error",
+          {
+            "pattern": "^Solar",
+            "ignoreCase": false
+          }
+        ],
+        "react/jsx-no-bind": 0
+      }
+    }
+  ]
+}
