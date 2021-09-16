@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanner.web.site", "FoodPlanner.web.site\FoodPlanner.web.site.csproj", "{350E85F3-F07D-4933-8BCC-9EA34B66C99E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAMPLATE.web.site", "FoodPlanner.web.site\TAMPLATE.web.site.csproj", "{350E85F3-F07D-4933-8BCC-9EA34B66C99E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{EDB6F73E-DD1A-4949-9D5A-9275E14D4443}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanner.Core.ApplicationServices", "Core\FoodPlanner.Core.ApplicationServices\FoodPlanner.Core.ApplicationServices.csproj", "{9CF07C8D-3111-42E0-8785-6D364FB138D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAMPLATE.Core.ApplicationServices", "Core\FoodPlanner.Core.ApplicationServices\TAMPLATE.Core.ApplicationServices.csproj", "{9CF07C8D-3111-42E0-8785-6D364FB138D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B3771DD9-129C-474E-BE1A-9457543A3D6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanner.DataAccess.CustonDb", "DataAccess\FoodPlanner.DataAccess.CustonDb\FoodPlanner.DataAccess.CustonDb.csproj", "{20645DC0-2587-4C7D-A436-356FDB61FB8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAMPLATE.DataAccess.CustonDb", "DataAccess\FoodPlanner.DataAccess.CustonDb\TAMPLATE.DataAccess.CustonDb.csproj", "{20645DC0-2587-4C7D-A436-356FDB61FB8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{7AFA0C9E-F161-4B3B-9160-18A8EB1A5CF3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{BEE6D71D-D40C-40FD-B103-B136EB37FF62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPlanner.Mobile.App.Android", "Mobile\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App.Android\FoodPlanner.Mobile.App.Android.csproj", "{71FB6913-789A-4595-8CA4-F4F9EABB083F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAMPLATE.Mobile.App.Android", "Mobile\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App.Android\TAMPLATE.Mobile.App.Android.csproj", "{71FB6913-789A-4595-8CA4-F4F9EABB083F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodPlanner.Mobile.App.iOS", "Mobile\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App.iOS\FoodPlanner.Mobile.App.iOS.csproj", "{DB1C16E0-B319-4E59-8470-221FD7565786}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAMPLATE.Mobile.App.iOS", "Mobile\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App.iOS\TAMPLATE.Mobile.App.iOS.csproj", "{DB1C16E0-B319-4E59-8470-221FD7565786}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanner.Mobile.App", "Mobile\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App.csproj", "{BBD13A3B-09D2-4106-B755-E847FEC335CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TAMPLATE.Mobile.App", "Mobile\FoodPlanner.Mobile.App\FoodPlanner.Mobile.App\TAMPLATE.Mobile.App.csproj", "{BBD13A3B-09D2-4106-B755-E847FEC335CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
