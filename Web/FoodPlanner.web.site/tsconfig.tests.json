@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "noEmit": true
+  },
+  "extends": "./tsconfig.base.json",
+  "exclude": ["node_modules"],
+  "include": [
+    "Frontend/scripts/src/components/**/*.spec.ts",
+    "Frontend/scripts/src/components/**/*.e2e.ts",
+    "Frontend/scripts/src/components/**/*.test.ts"
+  ]
+}

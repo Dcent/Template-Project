@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2017"
+    },
+    "extends": "./tsconfig.base.json",
+    "exclude": [
+        "node_modules",
+        "Frontend/scripts/**/*.spec.ts",
+        "Frontend/scripts/**/*.e2e.ts",
+        "Frontend/scripts/**/*.test.ts"
+    ],
+    "include": ["src", "Frontend/scripts/src"]
+}

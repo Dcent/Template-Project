@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "lib": ["DOM", "es2017", "ES2018.Promise"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "jsxFactory": "h"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "description": "Food Planner Project",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/stencil/stencil.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "create:ts:class": "cd ./Frontend/scripts/src && hygen ts class",
+    "create:ts:enum": "cd ./Frontend/scripts/src && hygen ts enum",
+    "create:ts:util": "cd ./Frontend/scripts/src && hygen ts util",
+    "create:ts:interface": "cd ./frontend/scripts/src && hygen ts interface",
+    "create:ts:service": "cd ./frontend/scripts/src && hygen ts service",
+    "create:ts:component": "cd ./frontend/scripts/src && hygen ts component",
+    "static": "stencil build --dev --watch --static",
+    "static:storybook": "concurrently --names \"STORYBOOK,STATIC,STYLING\" --prefix-colors \"yellow.bgMagenta.bold,cyan.bgBlue.bold,red.bgRed.bold\" \"npm run storybook\" \"npm run static\" \"npm run static:styling\"",
+    "static:styling": "stylus --watch ./Frontend/styling/app.styl --out Frontend/storybook/dist/css/ ",
+    "build": "npm run install-ci && npm run build:stencil && npm run build:styling",
+    "build:stencil": "stencil build --prod",
+    "build:styling": "stylus --compress ./Frontend/styling/app.styl --out wwwroot/css/",
+    "watch:styling": "stylus --watch ./Frontend/styling/app.styl --out wwwroot/css/ ",
+    "generate": "stencil generate",
+    "start": "concurrently --names \"STENCIL,STYLING\" --prefix-colors \"cyan.bgBlue.bold,red.bgRed.bold\" \"stencil build --dev --watch\" \"npm run watch:styling\"",
+    "start:stencil": "stencil build --dev --watch",
+    "pretest": "tsc --project tsconfig.tests.json",
+    "test": "npm run test:frontend && npm run test:stencil",
+    "test:stencil": "stencil test --spec --e2e --ci --reporters='default' --reporters='jest-junit' --detectOpenHandles",
+    "test:frontend": "jest --roots=\"Frontend/scripts/src/utils\" --ci --reporters='default' --reporters='jest-junit'",
+    "hygen": "hygen",
+    "install-ci": "yarn install",
+    "pre-build": "npm install -g yarn && npm run build",
+    "storybook": "start-storybook --port 5014 --config-dir ./Frontend/storybook/config/dev --static-dir ./Frontend/storybook/dist --quiet"
+  },
+  "devDependencies": {
+    "@stencil/core": "^2.8.1",
+    "@stencil/eslint-plugin": "^0.3.1",
+    "@stencil/store": "^1.4.1",
+    "@stencil/stylus": "^1.0.1",
+    "@storybook/addon-a11y": "^6.3.7",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-docs": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/addon-viewport": "^6.3.7",
+    "@storybook/addons": "^6.3.7",
+    "@storybook/core": "^6.3.7",
+    "@storybook/theming": "^6.3.7",
+    "@storybook/web-components": "^6.3.7",
+    "@types/jest": "26.0.22",
+    "@types/puppeteer": "5.4.4",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "concurrently": "^6.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.25.2",
+    "eslint-webpack-plugin": "^3.0.1",
+    "hygen": "^6.1.0",
+    "jest": "^26.1.0",
+    "jest-cli": "^26.6.3",
+    "jest-junit": "^11.0.1",
+    "lint-staged": "^11.1.2",
+    "lit-html": "^1.4.1",
+    "miragejs": "^0.1.41",
+    "prettier": "2.3.2",
+    "puppeteer": "^10.2.0",
+    "stylus": "^0.55.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.3",
+    "workbox-build": "6.3.0"
+  },
+  "jest-junit": {
+    "outputDirectory": "./test-results"
+  },
+  "dependencies": {
+    "storybook": "^6.3.8"
+  },
+  "-vs-binding": {
+    "ProjectOpened": [
+      "build"
+    ]
+  }
+}
