@@ -43,7 +43,7 @@ async function customFetch<T>(url: string, options: RequestInit): Promise<Custom
         const response = await fetch(`${url}`, options);
         let data = null;
         if (!response.ok) {
-            console.log("ERROR log:", response);
+            console.log("ERROR log:", response, `${url}`);
             return { response: response, data: data };
         }
         data = await response.text();

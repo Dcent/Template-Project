@@ -7,6 +7,7 @@ describe("mock-mock", () => {
             components: [MockMock],
             html: `<mock-mock></mock-mock>`
         });
+        await page.waitForChanges();
         expect(page.root).toEqualHtml(`
         <mock-mock>
           <div>

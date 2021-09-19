@@ -1,5 +1,5 @@
-import { Component, h, State } from "@stencil/core";
-import { getHelloWorld, postHelloWorld } from "../../services/hello-world/hello-world.service";
+import { Component, h, Method, State } from "@stencil/core";
+import { getHelloWorld } from "../../services/hello-world/hello-world.service";
 
 @Component({
     tag: "mock-mock"
@@ -8,27 +8,36 @@ export class MockMock {
     @State() text: string = "";
 
     componentWillLoad() {
-        this.test();
+        this.getHelloWorld().then((data) => {
+            this.text = data;
+        });
     }
 
-    private test() {
-        getHelloWorld()
-            .then((response) => {
-                console.log(response);
-                this.text += response.data[0];
-            })
-            .catch((e) => {
-                console.log(e);
-            });
-        postHelloWorld()
-            .then((response) => {
-                console.log(response);
-                this.text += " : " + response.data[0];
+    @Method()
+    async fetchHelloWorld() {
+        return await this.getHelloWorld();
+    }
+
+    private getHelloWorld() {
+        return getHelloWorld()
+            .then(async (response) => {
+                if (!response.response.ok) {
+                    return "";
+                }
+                return await response.data[0];
             })
             .catch((e) => {
                 console.log(e);
             });
     }
+    /*private postHelloWorld(){postHelloWorld()
+.then((response) => {
+console.log(response);
+this.text += " : " + response.data[0];
+})
+.catch((e) => {
+console.log(e);
+});}*/
 
     render() {
         return (

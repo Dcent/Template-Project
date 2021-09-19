@@ -11,12 +11,11 @@ export function startMirage(config: MirageConfig = { environment: "development" 
 
     if (config.environment !== "test") {
         console.log(
-            "%cFood Planner%c [MockServer]: Starting mock-server",
+            "%Template Project%c [MockServer]: Starting mock-server",
             "color:white; font-weight: bold;background-color:#003264; padding: 15px 10px;",
             "font-weight: bold;font-size: 11px;"
         );
     }
-
     const server = createServer({
         environment: config.environment,
 
