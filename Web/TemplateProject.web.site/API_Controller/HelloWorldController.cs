@@ -13,7 +13,7 @@ namespace TemplateProject.web.site.API_Controller
         public IEnumerable<string> World()
         {
             var list = new List<string>();
-            list.Add("Hello world");
+            list.Add("Hello world From real Api");
             IEnumerable<string> response = list;
             return response;
 
