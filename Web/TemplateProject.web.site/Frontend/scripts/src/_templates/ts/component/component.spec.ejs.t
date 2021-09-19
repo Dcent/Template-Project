@@ -1,5 +1,5 @@
 ---
-to: ../stencil/components/<%=name%>/test/<%= h.inflection.dasherize(h.inflection.underscore(name, true)) %>.spec.ts
+to: ./components/<%=name%>/test/<%= h.inflection.dasherize(h.inflection.underscore(name, true)) %>.spec.ts
 ---
 import { newSpecPage } from '@stencil/core/testing';
 import { <%=className%> } from '../<%=name%>';
@@ -12,9 +12,7 @@ describe('<%=name%>', () => {
     });
     expect(page.root).toEqualHtml(`
       <<%=name%>>
-        <mock:shadow-root>
-          <slot></slot>
-        </mock:shadow-root>
+        <div>Hello world from <%=name%></div>
       </<%=name%>>
     `);
   });

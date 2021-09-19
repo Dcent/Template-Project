@@ -27,18 +27,16 @@
     "build": "npm run install-ci && npm run build:stencil && npm run build:styling",
     "build:stencil": "stencil build --prod",
     "build:styling": "stylus --compress ./Frontend/styling/app.styl --out wwwroot/css/",
-    "watch:styling": "stylus --watch ./Frontend/styling/app.styl --out wwwroot/css/ ",
-    "generate": "stencil generate",
-    "start": "concurrently --names \"STENCIL,STYLING\" --prefix-colors \"cyan.bgBlue.bold,red.bgRed.bold\" \"stencil build --dev --watch\" \"npm run watch:styling\"",
+    "start": "concurrently --names \"STENCIL,STYLING\" --prefix-colors \"cyan.bgBlue.bold,red.bgRed.bold\" \"stencil build --dev --watch\" \"npm run start:styling\"",
     "start:stencil": "stencil build --dev --watch",
+    "start:styling": "stylus --watch ./Frontend/styling/app.styl --out wwwroot/css/",
     "pretest": "tsc --project tsconfig.tests.json",
     "test": "npm run test:frontend && npm run test:stencil",
-    "test:stencil": "stencil test --spec --e2e --ci --reporters='default' --reporters='jest-junit' --detectOpenHandles",
+    "test:stencil": "stencil test --roots=\"Frontend/scripts/src/components\" --spec --e2e --ci --reporters='default' --reporters='jest-junit' --detectOpenHandles",
     "test:frontend": "jest --roots=\"Frontend/scripts/src/utils\" --ci --reporters='default' --reporters='jest-junit'",
-    "hygen": "hygen",
     "install-ci": "yarn install",
     "pre-build": "npm install -g yarn && npm run build",
-    "storybook": "start-storybook --port 5014 --config-dir ./Frontend/storybook/config/dev --static-dir ./Frontend/storybook/dist --quiet"
+    "storybook": "start-storybook --port 1338 --config-dir ./Frontend/storybook/config/dev --static-dir ./Frontend/storybook/dist --quiet"
   },
   "devDependencies": {
     "@stencil/core": "^2.8.1",
