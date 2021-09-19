@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "asp.net",
   "private": true,
-  "description": "Food Planner Project",
+  "description": "Template Project",
   "main": "dist/index.cjs.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
