@@ -11,8 +11,8 @@ anyway.
 Domain model driven backend code is also set up with Data access layer and a Core Project. this will be worked on in
 future versions. 
 
-mobil app is empty project and should/can be replaced by a new one when you start the project build, in this,
-setup its just to show it has a place
+mobil app has a basic Locator and login page setup ready for use, it can be deleted for better implementation, otherwise 
+its working out of the box. 
 
 
 # Npm tasks
