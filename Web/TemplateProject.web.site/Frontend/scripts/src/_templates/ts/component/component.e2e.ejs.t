@@ -1,14 +1,14 @@
 ---
-to: ./components/<%=name%>/test/<%= h.inflection.dasherize(h.inflection.underscore(name, true)) %>.e2e.ts
+to: ./components/<%=path%>/test/<%=componentDashed%>.component.e2e.tsx
 ---
-import { newE2EPage } from '@stencil/core/testing';
+import { newE2EPage } from "@stencil/core/testing";
 
-describe('<%=name%>', () => {
-  it('renders', async () => {
-    const page = await newE2EPage();
-    await page.setContent('<<%=name%>></<%=name%>>');
+describe("<%=componentDashed%>", () => {
+    it("renders", async () => {
+        const page = await newE2EPage();
+        await page.setContent("<<%=componentDashed%>/>");
 
-    const element = await page.find('<%=name%>');
-    expect(element).toHaveClass('hydrated');
-  });
+        const element = await page.find("<%=componentDashed%>");
+        expect(element).toHaveClass("hydrated");
+    });
 });

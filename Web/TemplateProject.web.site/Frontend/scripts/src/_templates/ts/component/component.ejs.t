@@ -1,18 +1,40 @@
 ---
-to: ./components/<%=name%>/<%= h.inflection.dasherize(h.inflection.underscore(name, true)) %>.tsx
+to: ./components/<%=path%>/<%=componentDashed%>.component.tsx
 ---
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop, Event, EventEmitter } from "@stencil/core";
 
 @Component({
-  tag: '<%=name%>',
-  styleUrl: './<%=name%>.styl'
+    tag: "<%=componentDashed%>",
+    styleUrl: "./<%=componentDashed%>.styl"
 })
-export class <%=className%> {
+export class <%=component%> {
+    // PROPS
+    /**
+     * name of user
+     */
+    @Prop() name: string;
 
-  render() {
-    return (
-      <div>Hello world from <%=name%></div>
-    );
-  }
+    // EVENTS
+    /**
+     * Description
+     */
+    @Event() clickOnUser: EventEmitter<string>;
 
+    // LISTEN
+
+    // STATE
+
+    // PRIVATE VARIABLES
+
+    // WATCH
+
+    // LIFECYCLE METHODS
+    render() {
+        return <div onClick={() => this.clicked()}>{this.name}</div>;
+    }
+
+    // PRIVATE METHODS
+    private clicked() {
+        this.clickOnUser.emit(this.name);
+    }
 }

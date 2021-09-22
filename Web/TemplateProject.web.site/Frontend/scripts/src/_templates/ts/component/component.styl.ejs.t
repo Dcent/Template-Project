@@ -1,5 +1,8 @@
 ---
-to: ./components/<%=name%>/<%= h.inflection.dasherize(h.inflection.underscore(name, true)) %>.styl
+to: ./components/<%=path%>/<%=componentDashed%>.styl
 ---
-<%=name%>
+<%=componentDashed%> div
     background-color: blue;
+    display: inline-block;
+    color: white;
+    padding: 1rem 2rem;

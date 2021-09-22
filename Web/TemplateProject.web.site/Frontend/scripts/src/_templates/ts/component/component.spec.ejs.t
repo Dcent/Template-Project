@@ -1,19 +1,18 @@
 ---
-to: ./components/<%=name%>/test/<%= h.inflection.dasherize(h.inflection.underscore(name, true)) %>.spec.ts
+to: ./components/<%=path%>/test/<%=componentDashed%>.component.spec.tsx
 ---
-import { newSpecPage } from '@stencil/core/testing';
-import { <%=className%> } from '../<%=name%>';
+import { newSpecPage } from "@stencil/core/testing";
+import { <%=component%> } from "../<%=componentDashed%>.component";
 
-describe('<%=name%>', () => {
-  it('renders', async () => {
-    const page = await newSpecPage({
-      components: [<%=className%>],
-      html: `<<%=name%>></<%=name%>>`,
+describe("<%=componentDashed%>", () => {
+    it("renders", async () => {
+        const page = await newSpecPage({
+            components: [<%=component%>],
+            html: `<<%=componentDashed%>/>`
+        });
+        expect(page.root).toEqualHtml(`
+          <<%=componentDashed%>>
+           <div></div>
+          </<%=componentDashed%>>`);
     });
-    expect(page.root).toEqualHtml(`
-      <<%=name%>>
-        <div>Hello world from <%=name%></div>
-      </<%=name%>>
-    `);
-  });
 });
