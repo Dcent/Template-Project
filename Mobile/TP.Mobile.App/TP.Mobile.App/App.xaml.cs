@@ -1,6 +1,7 @@
-﻿using System;
+﻿using System.Threading.Tasks;
+using TP.Mobile.App.PageModels;
+using TP.Mobile.App.Services.Navigation;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace TP.Mobile.App
 {
@@ -9,12 +10,16 @@ namespace TP.Mobile.App
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+        }
+        Task InitNavigation()
+        {
+            var navService = PageModelLocator.Resolve<INavigationService>();
+            return navService.NavigateToAsync<LoginPageModel>();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
+            await InitNavigation();
         }
 
         protected override void OnSleep()
