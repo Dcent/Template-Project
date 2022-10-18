@@ -26,7 +26,7 @@
         "static:styling": "npx tailwindcss -i ./Frontend/styling/app.css -o ./Frontend/storybook/dist/css/app.css --watch ",
         "build": "npm run install-ci && npm run build:stencil && npm run build:styling",
         "build:stencil": "stencil build --prod",
-        "build:styling": "npx tailwindcss -i ./Frontend/styling/app.css -o ./wwwroot/css/app.css",
+        "build:styling": "npx tailwindcss -i ./Frontend/styling/app.css -o ./wwwroot/css/app.css --minify",
         "start": "concurrently --names \"STENCIL,STYLING\" --prefix-colors \"cyan.bgBlue.bold,red.bgRed.bold\" \"stencil build --dev --watch\" \"npm run start:styling\"",
         "start:stencil": "stencil build --dev --watch",
         "start:styling": "npx tailwindcss -i ./Frontend/styling/app.css -o ./wwwroot/css/app.css --watch",

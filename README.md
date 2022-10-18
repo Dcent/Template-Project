@@ -3,7 +3,7 @@ This template Project is make for it to make it even faster to start up a new pr
 
 it is build on an Asp.core Project with an API possibility for the web frontend StencilJS has been installed,
 and a few examples has been made to show how to build tests and components, MirageJS has also been installed,
-for the unit test to use but also for Storybook component Lib. for CSS I have picked stylus as it is what I know. 
+for the unit test to use but also for Storybook component Lib. for CSS I have picked Tailwind css. 
 all will work out of the box and is ready to get expanded on, *MISSING* CSS bundling, but the idea is the Stencil
 components import their own styling and therefore the CSS build in ITCSS structure should only contain common css,
 anyway. 
@@ -41,14 +41,14 @@ This is the Prod mode tasks, it makes sure to build all so it is ready for a Pro
 most used command here.<br />
 __"build": builds the stencil and styling code for Prod use, and compress css<br />__
 __"build:stencil": build stencil for prod use<br />__
-__"build:styling": build stylus to css for prod use in compressed<br />__
+__"build:styling": build tailwind for prod use in compressed<br />__
 
 ## start tasks
 this is the debug/dev mode of the project frontend, it enable you to debug in your browser as stuff is not compressed
 __start__ is the one you will use the most from here as it ensure both styles and JS is watch and build on changes<br />
-__"start": builds the stencil and stylus for dev mode, and watch for changes to rebuild for enable debug as well <br />__
+__"start": builds the stencil and tailwind for dev mode, and watch for changes to rebuild for enable debug as well <br />__
 __"start:stencil": builds stencil for dev mode so you can debug your code also watches for changes<br />__
-__"start:styling": builds stylus for dev mode and watches for changes<br />__
+__"start:styling": builds tailwind for dev mode and watches for changes<br />__
 
 ## test tasks
 this is the unit test part, and is used to make sure all test are green before you do a commit. it should be run before 
