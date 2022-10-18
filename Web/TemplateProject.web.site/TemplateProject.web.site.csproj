@@ -45,6 +45,7 @@
     <None Remove=".prettierignore" />
     <None Remove="jest.config.js" />
     <None Remove="stencil.config.ts" />
+    <None Remove="tailwind.config.js" />
     <None Remove="yarn.lock" />
   </ItemGroup>
 
