@@ -5,7 +5,7 @@ import { Component, h, Prop, Event, EventEmitter } from "@stencil/core";
 
 @Component({
     tag: "<%=componentDashed%>",
-    styleUrl: "./<%=componentDashed%>.styl"
+    styleUrl: "./<%=componentDashed%>.css"
 })
 export class <%=component%> {
     // PROPS
