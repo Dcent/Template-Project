@@ -1,0 +1,15 @@
+/*******************************
+New Tailwind structure starts here.
+
+Read more about Tailwind here:
+
+https://tailwindcss.com/docs/installation
+*******************************/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*******************************
+New Tailwind structure ends here.
+*******************************/

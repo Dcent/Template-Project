@@ -44,6 +44,7 @@ console.log(e);
             <div>
                 <h1>It still works</h1>
                 {this.text}
+                <h1 class="text-3xl font-bold underline">Hello world!</h1>
             </div>
         );
     }
