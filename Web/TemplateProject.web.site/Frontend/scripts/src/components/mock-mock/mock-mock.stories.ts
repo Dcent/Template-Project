@@ -9,7 +9,7 @@ export default {
 };
 export const Primary = () => {
     return `<temp-generic componet-name="mock-mock" props='${JSON.stringify({
-        name: "SIK",
+        name: "Temp",
         data: { test: "hello", stencil: "is the way to go" }
     })}'></temp-generic>`;
 };
