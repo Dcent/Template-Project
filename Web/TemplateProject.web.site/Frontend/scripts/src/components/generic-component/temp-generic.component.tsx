@@ -1,4 +1,4 @@
-import { Component, h, Prop } from "@stencil/core";
+import { Component, h, Host, Prop } from "@stencil/core";
 
 @Component({
     tag: "temp-generic"
@@ -35,7 +35,7 @@ export class TempGeneric {
     }
 
     render() {
-        return <div>{<this.componetName {...this._propsJson} />}</div>;
+        return <Host>{<this.componetName {...this._propsJson} />}</Host>;
     }
 
     // PRIVATE METHODS
