@@ -1,16 +1,19 @@
-import { Component, h, Method, State } from "@stencil/core";
+import { Component, h, Method, Prop, State } from "@stencil/core";
 import { getHelloWorld } from "../../services/hello-world/hello-world.service";
 
 @Component({
     tag: "mock-mock"
 })
 export class MockMock {
+    @Prop() name: string;
+    @Prop() data: any;
     @State() text: string = "";
 
     componentWillLoad() {
         this.getHelloWorld().then((data) => {
             this.text = data;
         });
+        console.log(this.data);
     }
 
     @Method()
@@ -44,6 +47,7 @@ console.log(e);
             <div>
                 <h1>It still works</h1>
                 {this.text}
+                {this.name}
                 <h1 class="text-3xl font-bold underline">Hello world!</h1>
             </div>
         );

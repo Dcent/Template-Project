@@ -3,10 +3,13 @@ export default {
     parameters: {
         actions: {
             handles: ["mouseover", "click"]
-        },
+        }
         // Show Stencil readme file in the notes tab
-    },
+    }
 };
 export const Primary = () => {
-    return `<mock-mock></mock-mock>`
-}
+    return `<temp-generic componet-name="mock-mock" props='${JSON.stringify({
+        name: "Temp",
+        data: { test: "hello", stencil: "is the way to go" }
+    })}'></temp-generic>`;
+};
